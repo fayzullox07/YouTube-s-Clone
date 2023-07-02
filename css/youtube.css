@@ -1,0 +1,422 @@
+/* General codes */
+p {
+  font-family: Roboto, Arial;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+body {
+  /* This style below will be inherited */
+  font-family: Roboto, Arial;
+  margin: 0;
+  padding-top: 80px;
+  padding-left: 96px;
+  padding-right: 24px;
+  background-color: rgb(248, 248, 248);
+}
+
+
+/* Img codes */
+/* object-fit: contain;
+  object-position: right; */
+
+
+
+
+
+
+
+/* Header codes */
+
+
+.header {
+  height: 55px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #fff;
+  border-bottom: 1px solid rgb(228, 228, 228);
+  z-index: 300;
+}
+
+
+
+.left_section {
+  display: flex;
+  align-items: center;
+}
+
+
+.nav_logo {
+  height: 20px;
+
+}
+
+.nav_menu {
+  height: 24px;
+  margin: 0 24px;
+}
+
+
+
+
+.middle_section {
+  flex: 1;
+  margin-left: 70px;
+  margin-right: 35px;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  width: 0;
+}
+
+.search_bar {
+  flex: 1;
+  height: 34px;
+  padding: 2px 0;
+  padding-left: 12px;
+  font-size: 16px;
+  border: 1px solid lightgray;
+  border-radius: 2px;
+  box-shadow: inset 1px 2px 5px rgba(0, 0, 0, 0.05);
+  width: 0;
+}
+
+.search_bar::placeholder {
+  font-size: 16px;
+}
+
+.search_button {
+  height: 40px;
+  width: 60px;
+  background-color: rgb(240, 240, 240);
+  border: 1px solid rgba(192, 192, 192);
+  margin-left: -1px;
+  margin-right: 10px;
+}
+
+.search_button,
+.voice_search_button,
+.upload_icon_container,
+.notification_icon_container,
+.current_user_img_container,
+.youtube_apps_icon_container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.search_button .tooltip,
+.voice_search_button .tooltip,
+.upload_icon_container .tooltip,
+.notification_icon_container .tooltip,
+.current_user_img_container .tooltip,
+.youtube_apps_icon_container .tooltip {
+  position: absolute;
+  background-color: gray;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 2px;
+  font-size: 12px;
+  bottom: -30px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.search_button:hover .tooltip,
+.voice_search_button:hover .tooltip,
+.upload_icon_container:hover .tooltip,
+.notification_icon_container:hover .tooltip,
+.current_user_img_container:hover .tooltip,
+.youtube_apps_icon_container:hover .tooltip {
+  opacity: 1;
+
+}
+
+.voice_search_button {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  border: none;
+  background-color: rgb(240, 240, 240);
+
+}
+
+.search_icon {
+  height: 25px;
+}
+
+.voice_search_icon {
+  height: 24px;
+}
+
+
+.right_section {
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  margin-right: 20px;
+}
+
+.upload_icon {
+  height: 24px;
+}
+
+.youtube_apps_icon {
+  height: 24px;
+}
+
+
+.notification_icon {
+  height: 24px;
+}
+
+.current_user_img {
+  height: 32px;
+  border-radius: 50%;
+}
+
+.notification_count {
+  position: absolute;
+  right: -5px;
+  top: -5px;
+  background-color: red;
+  color: white;
+  font-size: 11px;
+  padding: 2px 5px;
+  border-radius: 50%;
+}
+
+/* Sidebar */
+
+@media (max-width:1200px) {
+  .sidebar {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 55px;
+    background-color: #fff;
+    width: 72px;
+    z-index: 200;
+    padding-top: 5px;
+  }
+
+  .sidebar_link {
+    height: 74px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    cursor: pointer;
+  }
+
+  .sidebar_link:hover {
+    background-color: rgb(235, 235, 235);
+  }
+
+  .sidebar_link img {
+    height: 24px;
+    margin-bottom: 4px;
+  }
+
+  .sidebar_link div {
+    font-size: 10px;
+
+  }
+}
+
+@media (min-width:1200px) {
+  body {
+    padding-left: 200px;
+  }
+
+  .sidebar {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 55px;
+    background-color: #fff;
+    width: 195px;
+    z-index: 200;
+    padding-top: 13px;
+  }
+
+  .sidebar_link {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 8px 24px;
+  }
+
+  .sidebar_link:hover {
+    background-color: rgb(235, 235, 235);
+  }
+
+  .sidebar_link img {
+    height: 24px;
+    margin-bottom: 4px;
+    margin-right: 24px;
+
+  }
+
+  .sidebar_link div {
+    font-size: 14px;
+
+  }
+}
+
+/* All about video */
+
+.video_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 16px;
+  row-gap: 40px;
+}
+
+
+@media (max-width: 750px) {
+  .video_grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1000px) {
+  .video_grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width:751px) and (max-width:999px) {
+  .video_grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+
+.preview {
+  width: 100%;
+}
+
+.video_info_grid {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  column-gap: 10px;
+
+}
+
+.profile_picture_container {
+  position: relative;
+  display: inline-block;
+}
+
+.chanel_tooltip {
+  background-color: white;
+  width: 200px;
+  padding: 12px 12px;
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+  position: absolute;
+  top: 55px;
+  z-index: 300;
+
+  opacity: 0;
+  pointer-events: none;
+
+  display: flex;
+  align-items: center;
+  transition: opacity 0.15s;
+}
+
+.profile_picture_container:hover .chanel_tooltip {
+  opacity: 1;
+}
+
+.chanel_tooltip_img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  margin-right: 8px;
+}
+
+.chanel_tooltip_title {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.chanel_tooltip_stats {
+  color: rgb(96, 96, 96);
+  font-size: 14px;
+}
+
+.profile_img {
+  width: 36px;
+  border-radius: 50%;
+}
+
+
+
+
+.video_title {
+  margin-top: 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+.preview_row {
+  margin-bottom: 8px;
+  position: relative;
+
+}
+
+.video_time {
+  background-color: black;
+  color: #fff;
+  position: absolute;
+  bottom: 10px;
+  right: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 2px 4px;
+  border-radius: 2px;
+}
+
+.video_author,
+.video_stats {
+  font-size: 12px;
+  color: rgb(96, 96, 96);
+}
+
+
+.video_author {
+  margin-bottom: 4px;
+}
+
+
+@media (min-with:1000px) {
+  .video_title {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .video_author,
+  .video_stats {
+    font-size: 14px;
+  }
+}
